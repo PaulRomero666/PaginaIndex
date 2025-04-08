@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: black;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  background: rgb(199, 177, 52);
+  width: 100%;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.Nombre {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav a {
+  font-weight: 600;
+  padding: 8px 12px;
+  color: black;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Bienvenida */
+.text {
+  font-size: 3rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin: 40px 0;
+  text-shadow:
+    0 0 10px gold,
+    0 0 20px gold,
+    0 0 40px gold,
+    0 0 80px gold;
+}
+
+/* Contenedor animaciones */
+.contenedor {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: goldenrod;
+  border-radius: 50px;
+  gap: 20px;
+  padding: 20px;
+}
+
+.animacion, .animacion2, .animacion3 {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  animation: slider 10s linear infinite;
+}
+
+@keyframes slider {
+  0% { background-image: url('./img/gafas.PNG'); }
+  33% { background-image: url('./img/gorra.PNG'); }
+  66% { background-image: url('./img/men2.PNG'); }
+  100% { background-image: url('./img/women2.PNG'); }
+}
+
+/* Contenedor tarjetas */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.card {
+  flex: 1 1 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  max-width: 300px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-footer {
+  width: 60px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul {
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-social .social-icons a {
+  margin: 0 10px;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .text {
+    font-size: 2.2rem;
+  }
+
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    flex-direction: column;
+   
+  
+
+  }
+
+  .card {
+    width: 90%;
+  
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 60px;
+  }
+
+  .Nombre {
+    font-size: 1.2rem;
+  }
+
+  .text {
+    font-size: 1.8rem;
+  }
+
+  .animacion, .animacion2, .animacion3 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+  h3{
+    color: aquamarine;
+  }
+}
+
+
